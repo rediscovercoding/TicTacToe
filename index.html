@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js" defer></script>
+    <title>TicTacToe</title>
+    <style>
+    .container{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        height: 300px;
+        width: 300px;
+        margin: auto;
+    }
+    .container div{
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        font-size: 50px;
+        text-align: center;
+    }
+    .leftPanel{
+        display:grid;
+        width: 300px;
+        grid-template-rows: 1fr 1fr;
+    }
+    p{
+        color: Red;
+        font-size: 30px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div> Tic Tac Toe</div>
+    <div class="leftPanel">
+        Player 1 (X) <input type="text" id="player1">
+        Player 2 (O)<input type="text" id="player2">
+        <input type="button" value="Submit" onclick="bookPlayer()">
+    </div>    
+    <div class="container">
+        <div class="box1" onclick="display(1)"></div>
+        <div class="box2" onclick="display(2)"></div>
+        <div class="box3" onclick="display(3)"></div>
+        <div class="box4" onclick="display(4)"></div>
+        <div class="box5" onclick="display(5)"></div>
+        <div class="box6" onclick="display(6)"></div>
+        <div class="box7" onclick="display(7)"></div>
+        <div class="box8" onclick="display(8)"></div>
+        <div class="box9" onclick="display(9)"></div>
+    </div>
+    <div class="announce">
+
+    </div>
+</body>
+</html>
