@@ -14,7 +14,7 @@ function display(n){
     let cellid = document.querySelector(`#cellid${n}`);
     let WinnerClass = document.querySelector('.WinnerClass');
     
-    //display of spot or mark
+    //display of spot or mark, when no winner is already present
     if (turnNo < 9 && cellid === null && WinnerClass == null){  //cellid ===null condition so that each mark is in unique box
         if (turnNo%2 ==0){
             turnNo++;
@@ -30,7 +30,7 @@ function display(n){
         }
     box.appendChild(div);
     }    
-    //logic of winning after move no 5
+    //logic of winning after move no 5 and no winner already announced
     if (turnNo > 4 && turnNo <9 && WinnerClass == null){
         
         let mark = gameboard[0].move;
@@ -98,7 +98,7 @@ function Winner(mark, array1){
     announce.appendChild(p);
     
 }
-
+//below function to reset the board
 function reset(){
     let announce= document.querySelector('.announce');
     while (announce.lastElementChild) {
@@ -116,7 +116,7 @@ function reset(){
     turnNo = 0;
     
 }
-
+//below function to highlight the winning boxes
 function colorBox(array1){
     console.log(array1);
     
