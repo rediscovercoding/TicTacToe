@@ -5,21 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="javascript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
     <title>TicTacToe</title>
     <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Comic Neue', cursive, sans-serif;
+        background-color: #489f9d;
+    }
+    .heading{
+        font-weight: 500;
+        font-size:50px;
+        background-color: pink;
+        border-radius: 10px;
+    }
     .container{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         height: 300px;
         width: 300px;
-        margin: auto;
+        border-radius: 10px;
+        background-color: aquamarine;
+        padding: 20px;
     }
     .container div{
-        border: 1px solid black;
+        border: 1px solid rgba(155, 155, 155, 0.589);
         height: 100px;
         width: 100px;
-        font-size: 50px;
+        font-size: 80px;
         text-align: center;
     }
     .leftPanel{
@@ -32,15 +50,15 @@
         font-size: 30px;
         text-align: center;
     }
+    .reset{
+        text-align: center;
+        
+    }
     </style>
 </head>
 <body>
-    <div> Tic Tac Toe</div>
-    <div class="leftPanel">
-        Player 1 (X) <input type="text" id="player1">
-        Player 2 (O)<input type="text" id="player2">
-        <input type="button" value="Submit" onclick="bookPlayer()">
-    </div>    
+    <div class="heading"> Tic Tac Toe</div>
+       
     <div class="container">
         <div class="box1" onclick="display(1)"></div>
         <div class="box2" onclick="display(2)"></div>
@@ -51,6 +69,9 @@
         <div class="box7" onclick="display(7)"></div>
         <div class="box8" onclick="display(8)"></div>
         <div class="box9" onclick="display(9)"></div>
+    </div>
+    <div class="reset">
+        <input type="button" value="Reset" onclick="reset()" style="font-size: 20px;">
     </div>
     <div class="announce">
 
